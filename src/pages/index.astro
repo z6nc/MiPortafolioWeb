@@ -5,12 +5,14 @@ import HeroProyectos from '../components/layout/Secciones/ListaProyectos/HeroPro
 import HeroExperienciaLaboral from '../components/layout/Secciones/ExperienciaLaboral/HeroExperienciaLaboral.astro';
 import HeroCertificaciones from '../components/layout/Secciones/Certificaciones/HeroCertificaciones.astro';
 import HeroPreguntasFrecuentes from '../components/layout/Secciones/PreguntasFrecuentes/HeroPreguntasFrecuentes.astro';
+import { CarruselTecnologia } from '../components/layout/CarruselTecnologia/CarruselTecnologia.tsx';
 ---
 
 <Layout tituloWeb="Home | Andres Velasquez">
 	<Header />
 	<main class="mx-auto min-h-screen flex flex-col gap-48  px-6 lg:mt-20 lg:pb-24">
 		<HeroProyectos />
+		<CarruselTecnologia />
 		<HeroExperienciaLaboral />
 		<HeroCertificaciones />
 		<HeroPreguntasFrecuentes />
