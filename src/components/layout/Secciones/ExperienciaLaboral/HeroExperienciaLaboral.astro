@@ -1,0 +1,24 @@
+---
+import Titulo from "../../../common/titulos/titulo.astro";
+import { ListaTrabajos } from "../../../../data/trabajos";
+import ListaExperienciaLabora from "../../../common/ExperienciaLaboral/ListaExperienciaLabora.astro";
+import  JobIcon from "../../../icon/JobIcon.astro";
+
+---
+
+<section
+  class="flex flex-col gap-y-9 items-center justify-center"
+>
+  <Titulo texto="EXPERIENCIA LABORAL"  icon={JobIcon}/>
+
+  <!-- Inforamcion Trabajo -->
+  <article
+    class="flex flex-col justify-between gap-y-7 relative lg:max-w-[50%] lg:border-l-1 border-gray-500 lg:pl-16"
+  >
+    {
+      ListaTrabajos.slice(0, 1)
+        .reverse()
+        .map((trabajo) => <ListaExperienciaLabora experiencia={trabajo} />)
+    }
+  </article>
+</section>

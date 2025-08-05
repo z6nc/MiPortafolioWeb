@@ -1,0 +1,20 @@
+---
+import Titulo from "../../../common/titulos/titulo.astro";
+import ItemProyecto from "../../../common/proyecto/ItemProyecto.astro";
+import { proyectos } from "../../../../data/proyectos";
+import ButtomCustom from "../../../common/button/ButtomCustom.astro";
+import  Star from "../../../icon/Star.astro";
+const CopiaProyecto = [...proyectos];
+---
+
+<section  class="flex flex-col gap-6 ">
+    <Titulo texto="PROYECTOS PRINCIPALES" icon={Star} />
+    <div class="flex flex-wrap gap-6 justify-center">
+        {
+        CopiaProyecto.reverse().slice(0, 3).map((proyecto) => (
+            <ItemProyecto proyecto={proyecto} />
+        ))
+        }
+    </div>
+    <ButtomCustom texto="Ver todos los proyectos" url="/ListaProyectos" />
+</section>

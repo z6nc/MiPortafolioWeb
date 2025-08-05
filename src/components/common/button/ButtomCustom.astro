@@ -1,0 +1,14 @@
+---
+const { texto, url } = Astro.props;
+import ClickIcon from '../../icon/ClickIcon.astro';
+---
+
+<a
+  href={url}
+  rel="noopener noreferrer"
+  aria-label={`Ir a ${texto}`}
+  class="inline-flex items-center gap-x-2 font-semibold text-sm text-secundario bg-yellow-400/20 border-1 border-yellow-500 mx-auto py-2 px-4 rounded-md hover:scale-105 transition-transform duration-100"
+>
+  {texto}
+  <ClickIcon />
+</a>

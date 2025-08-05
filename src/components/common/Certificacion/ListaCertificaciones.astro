@@ -1,0 +1,14 @@
+---
+import { ListaCertifaciones } from "../../../data/certificaciones";
+import ItemCertificacion from "./ItemCertificacion.astro";
+---
+
+<article
+  class="flex flex-wrap gap-3 items-center justify-center text-white max-w-6xl mx-auto"
+>
+  {
+    ListaCertifaciones.slice(0, 4).map((certificacion) => (
+      <ItemCertificacion certificado={certificacion} />
+    ))
+  }
+</article>

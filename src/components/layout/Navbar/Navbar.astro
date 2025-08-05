@@ -1,0 +1,43 @@
+---
+import LogoPrincipal from "../../icon/LogoPrincipal.astro";
+import Hambuerguesa from "../../icon/Hamburguesa.astro";
+import Close from "../../icon/Close.astro";
+import ListaNavbar from "../Navbar/ListadoNavbar.astro";
+---
+
+<nav
+  class="w-[90%] lg:w-[60%] 2xl:w-[40%] lg:sticky flex justify-between items-center py-3 px-4 lg:p-3 mx-auto text-sm my-8 relative top-1 lg:top-4 z-50 bg-[#050520] rounded-2xl border border-gray-600"
+>
+  <LogoPrincipal estilo="w-10 lg:w-12" />
+
+  <ListaNavbar
+    idItema="navbar"
+    estilo="lg:flex hidden  justify-center items-center"
+  />
+  <button class="block lg:hidden transition-all duration-150 ease-in-out">
+    <Hambuerguesa estilo="btnAbrir lg:hidden" />
+    <Close estilo="btnCerrar hidden" />
+  </button>
+</nav>
+
+<div
+  id="navbarResponsive"
+  class="bg-[#050520] hidden h-64 px-4 py-9 absolute top-28 w-[89%] text-sm rounded-xl left-5 border-1 border-gray-600 z-30"
+>
+  <ListaNavbar
+    estilo="flex text-start lg:hidden text-white flex-col justify-start items-start"
+  />
+</div>
+
+<script is:inline>
+  const hamburguesa = document.querySelector("button");
+  const OpenIcon = document.querySelector(".btnAbrir");
+  const CloseIcon = document.querySelector(".btnCerrar");
+  const navbarResponsive = document.querySelector("#navbarResponsive");
+
+  hamburguesa.addEventListener("click", () => {
+    OpenIcon.classList.toggle("hidden");
+    CloseIcon.classList.toggle("hidden");
+    navbarResponsive.classList.toggle("hidden");
+  });
+</script>

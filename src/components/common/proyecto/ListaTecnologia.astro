@@ -1,0 +1,23 @@
+---
+import { ListaTecnologia as ListaTecnologiaData } from "../../../data/tecnologias";
+const { tecnologia } = Astro.props;
+
+const tecnologiaData = ListaTecnologiaData.find(
+  (item) => item.NombreTecnoliga === tecnologia
+);
+---
+
+{
+  tecnologiaData && (
+    <li class="text-xs text-gray-300 inline-flex space-x-2 items-center px-3 bg-[#050520] p-2 rounded-lg border-1 border-gray-700">
+      <p>{tecnologia}</p>
+      {
+        <img
+          src={tecnologiaData.LogoTecnologia}
+          alt={tecnologia}
+          class="size-4"
+        />
+      }
+    </li>
+  )
+}

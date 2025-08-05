@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Titulo from "../components/common/titulos/titulo.astro";
+import CertificacionIcon from "../components/icon/CertificacionIcon.astro";
+import ListaHeroCertificacion from "../components/layout/Secciones/Certificaciones/ListaHeroCertificacion.astro";
+import { ListaCertifaciones } from "../data/certificaciones";
+const EmpresasCertifaciones = [
+  ...new Set(ListaCertifaciones.map((item) => item.company)),
+];
+---
+
+<Layout tituloWeb="Certificaciones | Andres Velasquez">
+  <main
+    class="mx-auto min-h-screen flex flex-col text-center px-6 lg:mt-20 lg:pb-24"
+  >
+    <Titulo texto="MIS CERTIFICACIONES" icon={CertificacionIcon} />
+
+    {
+      EmpresasCertifaciones.map((empresa) => (
+        <ListaHeroCertificacion EmpresaCertificado={empresa} />
+      ))
+    }
+  </main>
+</Layout>

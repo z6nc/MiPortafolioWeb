@@ -1,0 +1,41 @@
+---
+import InformacionProyecto from "../../common/ItemDetalleProyecto/InformacionProyecto.astro";
+import ListaTecnologiasProyecto from "../../common/ItemDetalleProyecto/ListaTecnologiasProyecto.astro";
+import TituloProyecto from "../../common/ItemDetalleProyecto/TituloProyecto.astro";
+const { proyecto } = Astro.props;
+---
+
+<section
+  class="text-secundario flex flex-col gap-6 justify-center animate-blurred-fade-in"
+>
+  <TituloProyecto NombreProyecto={proyecto.titulo} LinkGithub={proyecto.LinkCode} />
+
+    <section class="flex flex-wrap items-center gap-5 group">
+        <!-- Agregar Carrusel de imagenes -->
+        <div class="w-full h-[30vh] lg:h-[60vh] overflow-hidden border border-gray-400 rounded-md">
+            <img
+            class="w-full h-full object-cover object-top  group-hover:scale-105 transition-all duration-500 "
+            src={proyecto.imagenPortada}
+            alt={proyecto.titulo}
+            style={`view-transition-name: ${proyecto.titulo};`}
+            />
+        </div>
+        
+        <article class="flex flex-col gap-5">
+            <InformacionProyecto descricionProyecto={proyecto.descripcionLarga} />
+            <ListaTecnologiasProyecto
+                listaTecnoligas={proyecto.tecnologias}
+                linkWebsite={proyecto.webSite}
+            />
+            <a
+                href={proyecto.webSite}
+                target="_blank"
+                class="bg-orange-600 py-3 rounded-md border-b-8 border-orange-800 hover:bg-orange-500 text-center mt-7 hover:animate-tilt"
+            >
+                <span class="text-white font-black tracking-wide uppercase">
+                Visitar Sitio
+                </span>
+            </a>
+        </article>
+    </section>
+</section>

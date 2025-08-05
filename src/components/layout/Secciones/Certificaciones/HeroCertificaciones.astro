@@ -1,0 +1,12 @@
+---
+import Titulo from "../../../common/titulos/titulo.astro";
+import CertificacionIcon from "../../../icon/CertificacionIcon.astro";
+import ListaCertificaciones from "../../../common/Certificacion/ListaCertificaciones.astro";
+import ButtomCustom from "../../../common/button/ButtomCustom.astro";
+---
+<section class="flex flex-col gap-y-9 items-center justify-center">
+  <Titulo texto="Certificaciones" icon={CertificacionIcon} />
+
+  <ListaCertificaciones />
+   <ButtomCustom url={"/ListaCertificados"} texto={"Ver mas certificaciones"} />
+</section>

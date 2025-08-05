@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { proyectos } from "../data/proyectos";
+import ItemProyecto from "../components/common/proyecto/ItemProyecto.astro";
+import Titulo from "../components/common/titulos/titulo.astro";
+import Star from "../components/icon/Star.astro";
+---
+
+<Layout tituloWeb=" Proyectos | Andres Velasquez">
+  <main
+    class="mx-auto min-h-screen flex flex-col  px-2 lg:mt-20 lg:pb-24"
+  >
+    <Titulo texto="PROYECTOS PRINCIPALES" icon={Star} />
+    <div class="flex flex-wrap gap-6 justify-center mx-6 my-9">
+      {proyectos.map((p) => <ItemProyecto proyecto={p} />)}
+    </div>
+  </main>
+</Layout>

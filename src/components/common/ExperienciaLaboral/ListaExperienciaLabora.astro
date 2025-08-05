@@ -1,0 +1,23 @@
+---
+const {experiencia} = Astro.props;
+---
+<section class="flex flex-wrap mx-auto">
+  <span
+    class="text-yellow-400 -left-4 absolute rounded-full text-8xl lg:block hidden"
+  >
+    •
+  </span>
+
+  <div
+    class="space-y-2 shadow-lg p-6 rounded-2xl bg-[#0d0d33] border-1 border-gray-500"
+  >
+    <h3 class="text-xl font-bold text-yellow-400">{experiencia.title}</h3>
+    <h4 class="font-semibold text-white">{experiencia.company}</h4>
+    <p class="text-secundario">{experiencia.description}</p>
+    <p
+      class="text-yellow-400 inline-block px-4 py-1 text-center rounded-2xl bg-yellow-400/10 text-sm"
+    >
+      {experiencia.date}
+    </p>
+  </div>
+</section>

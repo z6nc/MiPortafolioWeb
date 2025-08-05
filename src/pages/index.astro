@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/Header/Header.astro';
+import HeroProyectos from '../components/layout/Secciones/ListaProyectos/HeroProyectos.astro';
+import HeroExperienciaLaboral from '../components/layout/Secciones/ExperienciaLaboral/HeroExperienciaLaboral.astro';
+import HeroCertificaciones from '../components/layout/Secciones/Certificaciones/HeroCertificaciones.astro';
+import HeroPreguntasFrecuentes from '../components/layout/Secciones/PreguntasFrecuentes/HeroPreguntasFrecuentes.astro';
+---
+
+<Layout tituloWeb="Home | Andres Velasquez">
+	<Header />
+	<main class="mx-auto min-h-screen flex flex-col gap-48  px-6 lg:mt-20 lg:pb-24">
+		<HeroProyectos />
+		<HeroExperienciaLaboral />
+		<HeroCertificaciones />
+		<HeroPreguntasFrecuentes />
+	</main>
+</Layout>

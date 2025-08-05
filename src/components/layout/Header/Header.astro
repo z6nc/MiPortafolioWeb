@@ -1,0 +1,25 @@
+---
+import LogoPrincipal from "../../icon/LogoPrincipal.astro";
+import RedesSociales from "../../common/RedesSociales.astro";
+import ListaButton from "../../common/button/ListaButton.astro";
+---
+
+<header
+  class="max-w-7xl mx-5 lg:mx-auto flex flex-col items-center justify-start gap-4 text-center lg:pt-24 lg:h-[90dvh] pb-24 lg:pb-0"
+>
+  <LogoPrincipal estilo="w-72 lg:w-80" />
+  <h1 class="text-3xl lg:text-5xl font-black uppercase drop-shadow-titulo">
+    Andres Velasquez
+  </h1>
+  <h4 class="text-lg lg:text-xl text-yellow-200 font-bold">
+    Front-end Developer
+  </h4>
+  <p class="max-w-3xl text-secundario text-base lg:text-lg mx-auto">
+    Diseño y creo experiencias digitales para la web, enfocándome en la
+    accesibilidad y en cada detalle de píxeles .
+  </p>
+  <RedesSociales />
+  <div class="flex flex-wrap justify-center gap-4 text-sm">
+    <ListaButton />
+  </div>
+</header>

@@ -1,0 +1,42 @@
+---
+import TecnologiaIcon from "../../icon/TecnologiaIcon.astro";
+import WebsiteIcon from "../../icon/WebsiteIcon.astro";
+import ListaTecnologia from "../proyecto/ListaTecnologia.astro";
+
+const { listaTecnoligas, linkWebsite } = Astro.props;
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center justify-center">
+    <!-- lista de tecnoligas usadas en el proyecto -->
+  <article class="flex flex-col gap-4 lg:items-center lg:border-r-1">
+    <div class="inline-flex items-center gap-2">
+      <TecnologiaIcon />
+      <h4 class="text-white text-lg font-black">TECNOLOGIAS</h4>
+    </div>
+
+    <ul class="flex items-center gap-3 flex-wrap">
+      {
+        listaTecnoligas.map((tecnologia: string) => (
+          <ListaTecnologia tecnologia={tecnologia} />
+        ))
+      }
+    </ul>
+  </article>
+  
+    <!-- link al sitio web del proyecto -->
+  <article class="flex flex-col gap-4 lg:items-center">
+    <div class="inline-flex gap-2 items-center">
+      <WebsiteIcon />
+      <h4 class="text-white text-lg font-black">WEBSITE</h4>
+    </div>
+
+    <a
+      class="underline font-semibold text-yellow-200 hover:text-yellow-400"
+      href={linkWebsite}
+      target="_blank"
+    >
+      {linkWebsite}
+    </a>
+  </article>
+  
+</div>

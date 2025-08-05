@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Monserat: "Montserrat", sans-serif;
+  /* --shadow-subtitle: -4px 4px 1px 1px #000; */
+  --drop-shadow-titulo:"1px 6px 1px #686867";
+  --color-fondoOscuro :  #0c0c28;
+}
+
+@view-transition {
+  navigation: auto;
+}
+

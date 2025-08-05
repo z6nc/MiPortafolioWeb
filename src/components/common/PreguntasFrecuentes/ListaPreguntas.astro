@@ -1,0 +1,32 @@
+---
+import { ListaPreguntasFrecuentes } from "../../../data/preguntasFrecuentes";
+import ItemPreguntas from "./ItemPreguntas.astro";
+---
+
+<article class="flex flex-col space-y-5 p-4 text-white">
+  {
+    ListaPreguntasFrecuentes.map((pregunta) => (
+      <ItemPreguntas pregunta={pregunta} />
+    ))
+  }
+</article>
+
+<script is:inline>
+  const Flechas = document.querySelectorAll(".flecha");
+  const btnPregunta = document.querySelectorAll(".btn-pregunta");
+  const respuestaPregunta = document.querySelectorAll(".pregunta-respuesta");
+  btnPregunta.forEach((boton, index) => {
+    boton.addEventListener("click", () => {
+      respuestaPregunta.forEach((respuesta, idx) => {
+        if (idx === index) {
+          respuesta.classList.toggle("hidden");
+        }
+      });
+      Flechas.forEach((flecha, idx) => {
+        if (idx === index) {
+          flecha.classList.toggle("rotate-180");
+        }
+      });
+    });
+  });
+</script>

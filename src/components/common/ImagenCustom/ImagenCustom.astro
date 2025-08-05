@@ -1,0 +1,13 @@
+---
+const { ImagenPortada, nombre, loading = "lazy" } = Astro.props;
+---
+
+<div class="w-full h-72 bg-black relative rounded-md group overflow-hidden">
+  <img
+    class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-all duration-300 ease-in-out"
+    src={ImagenPortada}
+    alt={`imagen de la web ${nombre}`}
+    loading={loading}
+    style={`view-transition-name: ${nombre};`}
+  />
+</div>

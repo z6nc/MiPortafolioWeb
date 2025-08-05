@@ -1,0 +1,17 @@
+---
+import { NavbarItems } from "../../../data//navbarItems.js";
+const estilo = Astro.props.estilo;
+const idItema = Astro.props.idItema;
+---
+
+<ul id={idItema} class={` gap-5 lg:gap-7 mx-3 ${estilo}`}>
+  {
+    NavbarItems.map((item) => (
+      <li>
+        <a href={item.urlItem} class="hover:text-yellow-300">
+          {item.NombreItem}
+        </a>
+      </li>
+    ))
+  }
+</ul>

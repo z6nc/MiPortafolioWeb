@@ -1,0 +1,18 @@
+---
+import LinkIcon from "../../icon/LinkIcon.astro";
+const {NombreProyecto , LinkGithub} = Astro.props;
+---
+<div class="inline-flex items-center justify-between">
+  <h1
+    class=" tracking-wide  text-2xl lg:text-3xl text-gray-100  text-center lg:text-start font-black   "
+  >
+    {NombreProyecto}
+  </h1>
+  <a
+    href={LinkGithub}
+    target="_blank"
+    class="hover:text-yellow-300 hover:animate-tada"
+  >
+    <LinkIcon />
+  </a>
+</div>

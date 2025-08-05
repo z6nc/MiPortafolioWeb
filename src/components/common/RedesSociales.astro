@@ -1,0 +1,16 @@
+---
+import { ListaRedesSociales } from "../../data/redesSociales";
+---
+<ul class="flex justify-center items-center space-x-3 text-white my-3">
+  {
+    ListaRedesSociales.map((redes) => (
+      <li
+        class=" bg-[#050520] p-2 rounded-lg border-1 border-gray-700"
+      >
+        <a href={redes.LinkRedSocial} target="_blank " class="">
+           <img class="w-5 h-5 " src={redes.LogoRedSocial} alt={redes.NombreRedSocial} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
