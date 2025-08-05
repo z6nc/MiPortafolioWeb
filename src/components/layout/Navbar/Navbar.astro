@@ -15,8 +15,12 @@ import ListaNavbar from "../Navbar/ListadoNavbar.astro";
     estilo="lg:flex hidden  justify-center items-center"
   />
   <button class="block lg:hidden transition-all duration-150 ease-in-out">
-    <Hambuerguesa estilo="btnAbrir lg:hidden" />
-    <Close estilo="btnCerrar hidden" />
+    <div class="btnAbrir lg:hidden">
+      <Hambuerguesa  />
+    </div>
+    <div class="btnCerrar  hidden">
+      <Close  />
+    </div>
   </button>
 </nav>
 
