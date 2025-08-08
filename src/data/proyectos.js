@@ -70,4 +70,15 @@ export const proyectos =
             imagenPortada: "https://res.cloudinary.com/dleem7osr/image/upload/v1747415703/PortadaVREPLAY01_clgmcs.webp",
             videoWebm: "https://res.cloudinary.com/dleem7osr/video/upload/v1740675379/videovreplay01_bhoeju.mp4",
         },
+         {
+            slug: "pboweb",
+            titulo: "Rediseño de PBO ",
+            descripcionCorta: "Rediseño moderno del sitio no oficial de PBO Radio usando React, TypeScript y Tailwind y mejoras de SEO.",
+            descripcionLarga: "Plataforma no oficial de PBO Radio desarrollada con React, TypeScript y Tailwind CSS. Implementa navegación con React Router, validación de formularios con Zod y optimización SEO. El diseño es responsivo y enfocado en la experiencia del usuario.",
+            tecnologias: ["React", "TypeScript", "TailwindCSS"],
+            webSite: "https://pbo-web-unofficial.vercel.app/",
+            LinkCode: "https://github.com/z6nc/PBO-web-unofficial",
+            imagenPortada: "https://res.cloudinary.com/dleem7osr/image/upload/PBOPortadas_wxawbg.webp",
+            videoWebm: "https://res.cloudinary.com/dleem7osr/video/upload/v1740675379/videovreplay01_bhoeju.mp4",
+        },
     ]
