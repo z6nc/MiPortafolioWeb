@@ -81,4 +81,15 @@ export const proyectos =
             imagenPortada: "https://res.cloudinary.com/dleem7osr/image/upload/PBOPortadas_wxawbg.webp",
             videoWebm: "https://res.cloudinary.com/dleem7osr/video/upload/v1740675379/videovreplay01_bhoeju.mp4",
         },
+           {
+            slug: "mindstack",
+            titulo: "MindStack ",
+            descripcionCorta: "Plataforma que organiza y muestra comandos útiles para librerías, instalación de dependencias y componentes UI para proyectos con React.js.",
+            descripcionLarga: "MindStack es una plataforma desarrollada con Next.js, TypeScript y TailwindCSS que reúne en un solo lugar comandos, snippets y guías rápidas para React.js. Los comandos están organizados por categorías, con enlaces directos a la documentación oficial, e incluyen variantes para pnpm, npm, yarn y bun, facilitando el acceso y la productividad del desarrollador. ",
+            tecnologias: ["Next.js", "TypeScript", "TailwindCSS"],
+            webSite: "https://mindstackdev.vercel.app/",
+            LinkCode: "https://github.com/z6nc/mindstack",
+            imagenPortada: "https://res.cloudinary.com/dleem7osr/image/upload/MindStackPortada_awxm4x.webp",
+            videoWebm: "https://res.cloudinary.com/dleem7osr/video/upload/v1740675379/videovreplay01_bhoeju.mp4",
+        },
     ]
