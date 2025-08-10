@@ -7,7 +7,7 @@ import cssLogo from "../assets/TecnologiasIcon/css.svg";
 import htmlLogo from "../assets/TecnologiasIcon/html.svg";
 import nodejsLogo from "../assets/TecnologiasIcon/nodejs.svg";
 import expressLogo from "../assets/TecnologiasIcon/express.svg";
-
+import nextjs from "../assets/TecnologiasIcon/nextjs.svg";
 export const ListaTecnologia = [
     {
         NombreTecnoliga: "Astro",
@@ -59,6 +59,11 @@ export const ListaTecnologia = [
     {
         NombreTecnoliga: "Express",
         LogoTecnologia: expressLogo.src,
+        ConocimientoTecnologia: "basico"
+    },
+       {
+        NombreTecnoliga: "Next.js",
+        LogoTecnologia: nextjs.src,
         ConocimientoTecnologia: "basico"
     },
 ];
